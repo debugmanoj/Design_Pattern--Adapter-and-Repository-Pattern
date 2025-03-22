@@ -1,8 +1,11 @@
-# React + Vite
+Repository Pattern
+The Repository Pattern acts as an abstraction layer between the application and the database. It helps organize database queries in a separate class, making the code cleaner and easier to maintain. Instead of writing database logic in multiple places, the repository handles all data operations.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Example:
+In a MERN app, instead of using Model.find() directly in your services, you create a UserRepository class that manages all database queries related to users.
 
-Currently, two official plugins are available:
+Adapter Pattern
+The Adapter Pattern is used to make two incompatible systems work together by acting as a bridge between them. It converts one interface into another that the application expects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Example:
+If your MERN app fetches data from two different APIs with different response formats, an Adapter can standardize them into a single format so your app can handle them easily.
